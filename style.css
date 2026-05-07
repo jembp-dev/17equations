@@ -188,3 +188,55 @@ select {
 p span {
     font-weight: 600;
 }
+
+/* ------------------- */
+/* Components         */
+/* ------------------- */
+
+.standard-button {
+    display: grid;
+    place-items: center;
+    padding: .5em 1em;
+    text-decoration: none;
+    width: 10em;
+    font-weight: 700;
+}
+
+.standard-button:hover{
+    background-color: hsl(var(--clr-accent02));
+    color: hsl(var(--clr-white));
+    transform: scale(1.05);
+    transition: transform  100ms ease-in-out;
+}
+
+.primary-navigation{
+    --gap: 5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 800;
+    margin-right: .5em;
+}
+
+.underline-indicators > * {
+    padding: var(--underline-gap, 0.75rem) 0;
+    border-bottom: .1rem solid hsl(var(--clr-white)/0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus{
+    border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active{
+    border-color: hsl( var(--clr-white) / 1);
+}
+
+/* Hour course 1:44h */
