@@ -6,7 +6,7 @@
 
 :root {
     --clr-dark: 0 0% 2.5%;
-    --clr-accent01: 130 5% 30%;
+    --clr-accent01: 25 0% 25%;
     --clr-accent02: 5 90% 50%;
     --clr-white: 25 32% 90%;
 
@@ -182,7 +182,7 @@ select {
 .numbered-title span {
     margin-right: .5em;
     font-weight: 700;
-    color: hsl( var(--clr-white) / .25);
+    color: hsl( var(--clr-accent01));
 }
 
 p span {
@@ -204,7 +204,7 @@ p span {
 
 .standard-button:hover{
     background-color: hsl(var(--clr-accent02));
-    color: hsl(var(--clr-white));
+    color: hsl(var(--clr-accent01));
     transform: scale(1.05);
     transition: transform  100ms ease-in-out;
 }
@@ -227,16 +227,40 @@ p span {
 
 .underline-indicators > * {
     padding: var(--underline-gap, 0.75rem) 0;
+    background-color: hsl( var(--clr-dark)/0);
+    border: 0;
     border-bottom: .1rem solid hsl(var(--clr-white)/0);
 }
 
 .underline-indicators > *:hover,
 .underline-indicators > *:focus{
-    border-color: hsl( var(--clr-white) / .5);
+    border-color: hsl( var(--clr-accent01));
 }
 
 .underline-indicators > .active{
-    border-color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-accent02));
 }
 
-/* Hour course 1:44h */
+.tab-list{
+    --gap: 2rem;
+}
+
+.dot-indicators > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: .25em;
+    background-color: hsl( var(--clr-accent01));
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl( var(--clr-accent02));
+    transform: scale(1.2);
+    transition: transform  25ms ease-in-out;
+}
+
+dot-indicators > [aria-selected="true"]{
+    background-color: hsl( var(--clr-accent02));
+}
