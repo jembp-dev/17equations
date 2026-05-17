@@ -264,3 +264,7 @@ p span {
 dot-indicators > [aria-selected="true"]{
     background-color: hsl( var(--clr-accent02));
 }
+
+/*add feedback to the buttons, to differenciate
+the hover and the click*/ 
+
