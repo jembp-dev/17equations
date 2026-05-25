@@ -134,7 +134,6 @@ select {
   white-space: nowrap; /* added line */
   border: 0;
 }
-
 /* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) );}
@@ -174,7 +173,7 @@ select {
 
 .numbered-title {
     font-family: var(--ff-satoshi);
-    font-size: var(--fs-500);
+    color: hsl( var(--clr-white)/0.5);
     text-transform: uppercase;
     letter-spacing: 4.75px;
 }
@@ -250,14 +249,14 @@ p span {
     border: 0;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    padding: .25em;
+    padding: .5em;
     background-color: hsl( var(--clr-accent01));
 }
 
 .dot-indicators > *:hover,
 .dot-indicators > *:focus {
     background-color: hsl( var(--clr-accent02));
-    transform: scale(1.2);
+    transform: scale(1.4);
     transition: transform  25ms ease-in-out;
 }
 
@@ -268,3 +267,23 @@ dot-indicators > [aria-selected="true"]{
 /*add feedback to the buttons, to differenciate
 the hover and the click*/ 
 
+.top-padding{
+    padding-top: 1em;
+}
+
+
+
+/*animation*/
+
+.expand-line {
+  animation: drawSquare 8s linear infinite;
+}
+
+@keyframes drawSquare {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
